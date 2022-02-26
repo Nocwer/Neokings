@@ -62,7 +62,7 @@ p{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .pie{
-    color: blue;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 footer{
@@ -173,6 +173,15 @@ article img:hover{
     transform: scale(2);
 }
 
+aside:hover{
+    transform: scale(2);
+}
+aside{
+    transition-property: all;
+    transition-duration: 3s;
+}
+
+
 /*Piezas protésicas*/
 section{
     padding: 1rem 0;
@@ -193,7 +202,7 @@ section div{
 }
 article p{
     font-family: sans-serif;
-    color: crimson;
+    color: grey;
 }
 
 /*Grids area*/
