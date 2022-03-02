@@ -173,13 +173,6 @@ article img:hover{
     transform: scale(2);
 }
 
-aside:hover{
-    transform: scale(2);
-}
-aside{
-    transition-property: all;
-    transition-duration: 3s;
-}
 
 
 /*Piezas protésicas*/
@@ -211,11 +204,12 @@ article p{
     grid-template-areas:
     "cabeza cabeza cabeza cabeza"
     "seccion seccion brazo brazo"
+    "galeria galeria galeria galeria"
     "info   info    info    info"
     "footer footer footer footer"
     ;
     grid-template-columns: 15% auto auto 15%;
-    grid-template-rows: auto auto auto auto ;
+    grid-template-rows: auto auto auto auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -230,7 +224,6 @@ section{
 }
 .border{
     grid-area: brazo;
-    padding: 10%;
     display: flex;
     justify-content: flex-end;
 }
@@ -241,6 +234,10 @@ section{
 .info{
     grid-area: info;
     padding: 10%;
+}
+
+#carouselExampleControls{
+    grid-area: galeria;
 }
 
 
@@ -265,6 +262,7 @@ nav{
     "seccion"
     "productos"
     "brazo"
+    "galeria"
     "info"
     "footer"
     ;
@@ -278,6 +276,7 @@ nav{
         "cabeza cabeza"
         "seccion productos"
         "seccion brazo"
+        "galeria galeria"
         "info    info"
         "footer  footer";
     }
@@ -291,6 +290,7 @@ nav{
         "cabeza cabeza cabeza"
         "seccion seccion productos"
         "brazo    brazo   brazo"
+        "galeria    galeria   galeria"
         "info     info     info"
         "footer    footer   footer";
     }
@@ -304,6 +304,7 @@ nav{
         "cabeza cabeza cabeza"
         "seccion seccion seccion"
         "productos brazo brazo"
+        "galeria galeria galeria"
         "info    info    info"
         "footer footer footer";
 
@@ -325,4 +326,15 @@ iframe{
 article p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: black;
+}
+
+
+/*Bootstrap*/
+video{
+    margin-left: 23%;
+}
+#carouselExampleControls img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
