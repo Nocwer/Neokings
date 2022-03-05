@@ -151,6 +151,16 @@ footer{
     color: antiquewhite;
     border: none;
 }
+
+.texto p{
+    padding: 3%;
+    color: silver;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+
+
 /*Multimedia*/
 img{
     margin-top: 15%;
@@ -203,13 +213,14 @@ article p{
     display: grid;
     grid-template-areas:
     "cabeza cabeza cabeza cabeza"
-    "seccion seccion brazo brazo"
+    "productos productos productos productos"
+    "tecto   texto   brazo   brazo"
     "galeria galeria galeria galeria"
     "info   info    info    info"
     "footer footer footer footer"
     ;
     grid-template-columns: 15% auto auto 15%;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
 }
@@ -221,6 +232,10 @@ section{
     grid-area: seccion;
     padding: 10%;
     background-color: linear-gradient(to bottom,red, black);
+}
+.texto{
+    grid-area: texto;
+    margin-left: 2%;
 }
 .border{
     grid-area: brazo;
@@ -241,11 +256,6 @@ section{
 }
 
 
-nav{
-    grid-area: nav;
-}
-
-
     /*flex*/
 .productosFlex{
     display: flex;
@@ -261,6 +271,7 @@ nav{
     "cabeza"
     "seccion"
     "productos"
+    "texto"
     "brazo"
     "galeria"
     "info"
@@ -274,8 +285,8 @@ nav{
         grid-template-columns: 1fr 2fr;
         grid-template-areas:
         "cabeza cabeza"
-        "seccion productos"
-        "seccion brazo"
+        "productos productos"
+        "texto brazo"
         "galeria galeria"
         "info    info"
         "footer  footer";
@@ -288,9 +299,9 @@ nav{
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas: 
         "cabeza cabeza cabeza"
-        "seccion seccion productos"
-        "brazo    brazo   brazo"
-        "galeria    galeria   galeria"
+        "productos productos productos"
+        "texto    texto   brazo"
+        "galeria    galeria   brazo"
         "info     info     info"
         "footer    footer   footer";
     }
@@ -302,8 +313,8 @@ nav{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas: 
         "cabeza cabeza cabeza"
-        "seccion seccion seccion"
-        "productos brazo brazo"
+        "productos productos productos"
+        "texto brazos brazo"
         "galeria galeria galeria"
         "info    info    info"
         "footer footer footer";
