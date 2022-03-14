@@ -69,15 +69,15 @@ footer{
     border-radius: 50%; 
     transition: 0.3s; 
     cursor: pointer;
-}
-.derecha .contenido .fas:hover{ 
-    background: #f12020;
-}
-.derecha .contenido .text{ 
-    font-size: 1.0625rem;
-    font-weight: 500; 
-    padding-left: 10px; 
-}
-.derecha .contenido .celular{
-    margin: 15px 0;
-}
+    .derecha .contenido .fas:hover{ 
+        background: #f12020;
+        .derecha .contenido .text{ 
+            font-size: 1.0625rem;
+            font-weight: 500; 
+            padding-left: 10px; 
+            .derecha .contenido .celular{
+                margin: 15px 0;
+                }
+            }
+        }
+    }
