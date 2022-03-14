@@ -29,13 +29,13 @@ footer{
                                 width: 15%; 
                                 background: #f12020;
                                 top: -10px; 
-                                .izquierda .contenido p{
+                                .caja-izquierda .contenido p{
                                     text-align: justify; 
-                                    .izquierda .contenido .social{
+                                    .caja-izquierda .contenido .social{
                                         margin: 20px 0 0 0;
-                                        .izquierda .contenido .social a{
+                                        .caja-izquierda .contenido .social a{
                                             padding: 0 2px;
-                                            .izquierda .contenido .social a span{
+                                            .caja-izquierda .contenido .social a span{
                                                 height: 40px;
                                                 width: 40px;
                                                 background: #1a1a1a;
@@ -44,9 +44,26 @@ footer{
                                                 font-size: 18px;
                                                 border-radius: 5px;
                                                 transition: 0.3s;
-                                                .izquierda .contenido .social a span:hover{
+                                                .caja-izquierda .contenido .social a span:hover{
                                                     background: #f12020;
-                                                }
+                                .derecha .contenido .fas{
+                                    font-size: 1.4375rem;
+                                    background: #1a1a1a;
+                                    height: 45px; 
+                                    width: 45px; 
+                                    line-height: 45px; 
+                                    text-align: center; 
+                                    border-radius: 50%; 
+                                    transition: 0.3s; 
+                                    cursor: pointer;
+                                    .derecha .contenido .fas:hover{ 
+                                        background: #f12020;
+                                        .derecha .contenido .text{ 
+                                            font-size: 1.0625rem;
+                                            font-weight: 500; 
+                                            padding-left: 10px; 
+                                            .derecha .contenido .celular{
+                                                margin: 15px 0;
                                             }
                                         }
                                     }
@@ -58,26 +75,9 @@ footer{
             }
         }
     }
-
-.derecha .contenido .fas{
-    font-size: 1.4375rem;
-    background: #1a1a1a;
-    height: 45px; 
-    width: 45px; 
-    line-height: 45px; 
-    text-align: center; 
-    border-radius: 50%; 
-    transition: 0.3s; 
-    cursor: pointer;
-    .derecha .contenido .fas:hover{ 
-        background: #f12020;
-        .derecha .contenido .text{ 
-            font-size: 1.0625rem;
-            font-weight: 500; 
-            padding-left: 10px; 
-            .derecha .contenido .celular{
-                margin: 15px 0;
-                }
-            }
-        }
-    }
+}
+}
+}
+}
+}
+}
