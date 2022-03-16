@@ -1,0 +1,354 @@
+
+@import "footer";
+@import "generales";
+@import "nav";
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+/*footer*/
+
+
+.nosotros{
+    color: antiquewhite;
+    border: none;
+}
+
+.texto p{
+    width: 600px;
+    color: silver;
+    padding: 3%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+
+.piezas{
+    padding: 3%;
+    font-size: 180%;
+    color: black;
+    margin-left: 33%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/*Multimedia*/
+img{
+    margin-top: 15%;
+    transition-property: all;
+    transition-duration: 2s;
+}
+article img{
+    width: 100%;
+
+}
+article{
+    width: 50%;
+    height: auto;   
+}
+section img{
+    width: 100%;
+}
+
+article img:hover{
+    transform: scale(1.3);
+}
+
+
+
+/*Piezas protésicas*/
+section{
+    padding: 1rem 0;
+    background-color: linear-gradient(to bottom,red, black);
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+section div{
+    background-color: white;
+    border: 1px border black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article p{
+    font-family: sans-serif;
+    color: grey;
+}
+
+/*Grids area*/
+#gridsArea{
+    display: grid;
+    grid-template-areas:
+    "cabeza cabeza cabeza cabeza"
+    "productos productos productos productos"
+    "tecto   texto   brazo   brazo"
+    "galeria galeria galeria galeria"
+    "info   info    info    info"
+    "footer footer footer footer"
+    ;
+    grid-template-columns: 15% auto auto 15%;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+/*nombrar areas*/
+header{
+    grid-area: cabeza;
+}
+section{
+    grid-area: seccion;
+    padding: 10%;
+    background-color: linear-gradient(to bottom,red, black);
+}
+.texto{
+    grid-area: texto;
+}
+.border{
+    grid-area: brazo;
+    display: flex;
+    justify-content: flex-end;
+}
+#productos{
+    grid-area: productos;
+}  
+
+.info{
+    grid-area: info;
+    padding: 5%;
+}
+
+#carouselExampleControls{
+    grid-area: galeria;
+}
+
+
+    /*flex*/
+.productosFlex{
+    display: flex;
+    flex-direction: row;
+}
+
+/*media querie*/
+
+#gridsArea{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "cabeza"
+    "seccion"
+    "productos"
+    "texto"
+    "brazo"
+    "galeria"
+    "info"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+}
+@media (min-width:500px){
+    #gridsArea{
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "cabeza cabeza"
+        "productos productos"
+        "texto brazo"
+        "galeria galeria"
+        "info    info"
+        "footer  footer";
+    }
+
+}
+
+@media screen and (min-width:700px){
+    #gridsArea{
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "productos productos productos"
+        "texto    texto   texto"
+        "brazo   brazo   brazo "
+        "galeria    galeria   galeria"
+        "info     info     info"
+        "footer    footer   footer";
+    }
+
+}
+
+@media screen and (min-width:920px) {
+    #gridsArea{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "productos productos productos"
+        "texto brazo brazo"
+        "galeria galeria galeria"
+        "info    info    info"
+        "footer footer footer";
+
+    }
+}
+
+/*animaciones y transiciones*/
+article{
+    text-align: center;
+}
+iframe{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+article p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+
+/*Bootstrap*/
+
+#carouselExampleControls img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination > li > a{
+    background-color: grey;
+    color: red;
+}
+.mte{
+    color: black;
+    background-color: rgb(7, 221, 221);
+}
+.sti{
+    color: black;
+    background-color: rgb(48, 226, 48);
+}
+.nk3{
+    color: black;
+    background-color: rgb(145, 19, 145);
+}
+/*gridArea2-nosotros*/
+#gridsArea2{
+    display: grid;
+    grid-template-areas:
+    "cabeza cabeza cabeza cabeza"
+    "sobre   sobre   sobre  sobre"
+    "video    video    video video"
+    "proposito  proposito  proposito  proposito"
+    "iframe  iframe  iframe   iframe"
+    "info   info   info   info"
+    "footer footer footer footer"
+    ;
+    grid-template-columns: 15% auto auto 15%;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;}
+/*nombrar areas nosotros*/
+.sobreNosotros{
+    grid-area: sobre;
+    display: grid;
+    justify-content: center;
+}
+.video1{
+    grid-area: video;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito{
+    grid-area: proposito;
+    padding: 3%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;  
+    color: black;
+    outline: 10px dashed white;
+    box-shadow: 0 0 0 10px red;
+    animation: 2s bordeAnimado ease infinite;
+}
+@keyframes bordeAnimado {
+    to {
+    outline-color: black;
+    box-shadow: 0 0 0 3% grey;
+    }
+}
+
+
+.video2 {
+    grid-area: iframe;
+}
+.exp{
+    color: #111;
+    font-size: larger;
+    font-weight: bold;
+}
+
+/*media queries gridArea2*/
+#gridsArea2{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "cabeza"
+    "sobre"
+    "video"
+    "proposito"
+    "iframe"
+    "info"
+    "footer"
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto ;
+}
+@media (min-width:500px){
+    #gridsArea2{
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "cabeza cabeza"
+        "sobre sobre"
+        "video video"
+        "proposito proposito"
+        "iframe iframe"
+        "info    info"
+        "footer  footer";
+    }
+
+}
+
+@media screen and (min-width:700px){
+    #gridsArea2{
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "sobre sobre sobre"
+        "video    video   video"
+        "proposito   proposito   proposito "
+        "iframe    iframe   iframe"
+        "info     info     info"
+        "footer    footer   footer";
+    }
+
+}
+
+@media screen and (min-width:920px) {
+    #gridsArea2{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "cabeza cabeza cabeza"
+        "sobre sobre sobre"
+        "video video video"
+        "proposito proposito proposito"
+        "iframe  iframe  iframe"
+        "info    info    info"
+        "footer footer footer";
+    }
+}
+
+
+
+
