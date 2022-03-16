@@ -372,3 +372,14 @@ article p {
   #gridsArea2 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "cabeza cabeza cabeza" "sobre sobre sobre" "video video video" "proposito proposito proposito" "iframe  iframe  iframe" "info    info    info" "footer footer footer"; } }
+
+/*sass ll*/
+/*redes*/
+.btn--twitter {
+  background-color: #55acee; }
+
+.btn--facebook {
+  background-color: #3a5795; }
+
+.btn--youtube {
+  background-color: #862121; }
