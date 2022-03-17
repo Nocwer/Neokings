@@ -353,7 +353,7 @@ article p{
 /*sass ll*/
 
 
-/*redes*/
+/*redes/map*/
 $redes:(
     twitter: #55acee,
     facebook: #3a5795,
@@ -361,7 +361,44 @@ $redes:(
     );
 
 @each $red, $color in $redes  {
-    .btn--#{$red}{
+    .btn-#{$red}{
         background-color: $color;
+        width: 100%;
     }
+};
+
+/*extend*/
+.prospecto{
+    background-color: grey;
+}
+.prospecto--nk3{
+    @extend .prospecto;
+    border: 5px solid black;
+    background-color: rgb(97, 30, 97);
+}
+.prospecto--sti{
+    @extend.prospecto;
+    border: 5px solid black;
+    background-color: green;
+}
+.prospecto--mte{
+    @extend .prospecto;
+    border: 7px solid black;
+    background-color: cadetblue;
+}
+
+/*mixin*/
+
+@mixin color ($grey, $red) {
+    color: $red;
+    color: $grey;
+}
+.my_mixin{
+    @include color (black, red);
+    background-color: slategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 2px solid black;
 }
