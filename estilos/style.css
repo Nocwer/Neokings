@@ -233,7 +233,9 @@ section {
 .border {
   grid-area: brazo;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  border: none;
+}
 
 #productos {
   grid-area: productos; }
@@ -376,7 +378,8 @@ article p {
     box-shadow: 0 0 0 3% grey; } }
 
 .video2 {
-  grid-area: iframe; }
+  grid-area: iframe; 
+  border: red 5px dotted;}
 
 .exp {
   color: #111;
@@ -539,11 +542,15 @@ ul {
 }
 /* CONTACT INFO */
 .contact-info {
-  background: #000;
+  background: rgb(43, 42, 42);
+  color: black;
 }
 .contact-info h4, .contact-info ul, .contact-info p {
   text-align: center;
   margin: 0 0 1rem 0;
+}
+.cont{
+  color: black;
 }
 /* LARGE SIZE */
 @media(min-width: 700px) {
@@ -569,4 +576,10 @@ ul {
 .facebook h2{
   font-size: medium;
   color: grey;
+}
+
+/*Implantes*/
+.implantes{
+  height: 100%;
+  width: 100%;
 }
