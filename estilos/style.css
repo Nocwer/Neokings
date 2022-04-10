@@ -205,9 +205,11 @@ article img:hover {
 /*Grids area*/
 #gridsArea {
   display: grid;
-  grid-template-areas: "cabeza cabeza cabeza cabeza"
+  grid-template-areas:
+  "cabeza cabeza cabeza cabeza"
   "productos productos productos productos"
-  "tecto   texto   brazo   brazo"
+  "seccion seccion seccion brazo"
+  "texto   texto   texto   brazo"
   "galeria galeria galeria galeria"
   "info   info    info    info"
   "footer footer footer footer";
@@ -228,10 +230,13 @@ section {
 .texto {
   grid-area: texto; }
 
-.border {
+.aside{ 
   grid-area: brazo;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  align-items: flex-end;
+align-content: flex-end;}
+
 
 #productos {
   grid-area: productos; }
@@ -243,6 +248,7 @@ section {
 #carouselExampleControls {
   grid-area: galeria; }
 
+
 /*flex*/
 .productosFlex {
   display: flex;
@@ -252,9 +258,10 @@ section {
 #gridsArea {
   display: grid;
   gap: 10px;
-  grid-template-areas: "cabeza"
-  "seccion"
+  grid-template-areas: 
+  "cabeza"
   "productos"
+  "seccion"
   "texto"
   "brazo"
   "galeria"
@@ -266,8 +273,10 @@ section {
 @media (min-width: 500px) {
   #gridsArea {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "cabeza cabeza"
-  "productos productos"
+    grid-template-areas: 
+    "cabeza cabeza"
+    "productos productos"
+    "seccion seccion"
   "texto brazo"
   "galeria galeria"
   "info    info"
@@ -277,7 +286,8 @@ section {
   #gridsArea {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "cabeza cabeza cabeza"
-  "productos productos productos"
+    "productos productos productos"
+    "seccion seccion seccion"
   "texto    texto   texto"
   "brazo   brazo   brazo "
   "galeria    galeria   galeria"
@@ -288,7 +298,8 @@ section {
   #gridsArea {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "cabeza cabeza cabeza"
-  "productos productos productos"
+    "productos productos productos"
+    "seccion seccion seccion seccion"
   "texto brazo brazo"
   "galeria galeria galeria"
   "info    info    info"
@@ -296,6 +307,7 @@ section {
 
 /*animaciones y transiciones*/
 article {
+  width: 100%;
   text-align: center; }
 
 iframe {
@@ -307,7 +319,10 @@ iframe {
 
 article p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: black; }
+  color: black; 
+  font-size: 25px;
+  font-weight: bold;
+}
 
 /*Bootstrap*/
 #carouselExampleControls img {
@@ -356,7 +371,16 @@ article p {
   grid-area: video;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center; 
+    position: relative;
+    padding-bottom: 25.25%; 
+    padding-top: 30px; 
+    height: 0;
+    overflow: hidden;
+  
+}
+
+
 
 .proposito {
   grid-area: proposito;
@@ -395,21 +419,23 @@ article p {
   grid-template-columns: 1fr;
   grid-template-rows: auto; }
 
-@media (min-width: 500px) {
+@media screen and (min-width: 500px) {
   #gridsArea2 {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "cabeza cabeza"
-  "sobre sobre"
-  "video video"
-  "proposito proposito"
-  "iframe iframe"
-  "info    info"
-  "footer  footer"; } }
+    grid-template-areas: 
+    "cabeza cabeza"
+    "sobre sobre"
+    "video video"
+    "proposito proposito"
+    "iframe iframe"
+    "info    info"
+    "footer  footer"; } }
 
 @media screen and (min-width: 700px) {
   #gridsArea2 {
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "cabeza cabeza cabeza"
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+  "cabeza cabeza cabeza"
   "sobre sobre sobre"
   "video    video   video"
   "proposito   proposito   proposito "
