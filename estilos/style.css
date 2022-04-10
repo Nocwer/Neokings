@@ -1,5 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap");
+@import "footer";
+@import "generales";
+@import "nav";
+
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
 p {
   color: grey;
   padding: 5%;
@@ -21,6 +32,7 @@ footer {
 
 .contenido-principal .caja {
   flex-basis: 50%;
+  padding: 5% 10%;
 }
 
 .caja h2 {
@@ -204,7 +216,7 @@ p .piezas{
   grid-template-areas: 
   "cabeza cabeza cabeza cabeza"
   "productos productos productos productos"
-  "texto   texto   texto   brazo"
+  "texto   texto   brazo   brazo"
   "galeria galeria galeria galeria"
   "info   info    info    info"
   "footer footer footer footer";
@@ -226,20 +238,19 @@ section {
   grid-area: texto;
 }
 .texto-objetivo p{
-  font-size: large;
+  width: 100%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #07dddd;
+  font-size: 23px;
+  color: rgb(155, 151, 151);
+  float: left;
+  height: 100%;
+  width: 100%;
   display: flex;
   text-align: justify;
-
 }
 
 .aside-bor {
-  width: 100%;
   grid-area: brazo;
-  display: flex;
-  justify-content: flex-end;
-  border: none;
 }
 
 #productos {
@@ -270,41 +281,48 @@ section {
   "info"
   "footer";
   grid-template-columns: 1fr;
-  grid-template-rows: auto; }
+  grid-template-rows: auto; 
+}
+
 
 @media (min-width: 500px) {
   #gridsArea {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "cabeza cabeza"
-  "productos productos"
-  "texto brazo"
-  "galeria galeria"
-  "info    info"
-  "footer  footer"; } }
+    grid-template-areas:
+    "cabeza cabeza"
+    "productos productos"
+    "texto texto"
+    "brazo brazo"
+    "galeria galeria"
+    "info    info"
+    "footer  footer"; } }
 
 @media screen and (min-width: 700px) {
   #gridsArea {
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-areas: "cabeza cabeza cabeza"
-  "productos productos productos"
-  "texto    texto   texto"
-  "brazo   brazo   brazo "
-  "galeria    galeria   galeria"
-  "info     info     info"
-  "footer    footer   footer"; } }
+    grid-template-areas: 
+    "cabeza cabeza cabeza"
+    "productos productos productos"
+    "texto    texto   texto"
+    "brazo   brazo   brazo "
+    "galeria    galeria   galeria"
+    "info     info     info"
+    "footer    footer   footer"; } }
 
 @media screen and (min-width: 920px) {
   #gridsArea {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "cabeza cabeza cabeza"
-  "productos productos productos"
-  "texto brazo brazo"
-  "galeria galeria galeria"
-  "info    info    info"
-  "footer footer footer"; } }
+    grid-template-areas:
+    "cabeza cabeza cabeza"
+    "productos productos productos"
+    "texto texto brazo"
+    "galeria galeria galeria"
+    "info    info    info"
+    "footer footer footer"; } }
 
 /*animaciones y transiciones*/
 article {
+  width: 100%;
   text-align: center; }
 
 iframe {
@@ -349,13 +367,14 @@ article p {
 /*gridArea2-nosotros*/
 #gridsArea2 {
   display: grid;
-  grid-template-areas: "cabeza cabeza cabeza cabeza"
-  "sobre   sobre   sobre  sobre"
-  "video    video    video video"
-  "proposito  proposito  proposito  proposito"
-  "iframe  iframe  iframe   iframe"
-  "info   info   info   info"
-  "footer footer footer footer";
+  grid-template-areas:
+    "cabeza cabeza cabeza cabeza"
+    "sobre   sobre   sobre  sobre"
+    "video    video    video video"
+    "proposito  proposito  proposito  proposito"
+    "iframe  iframe  iframe   iframe"
+    "info   info   info   info"
+    "footer footer footer footer";
   grid-template-columns: 15% auto auto 15%;
   grid-template-rows: auto auto auto auto auto auto auto;
   grid-column-gap: 5px;
@@ -375,7 +394,7 @@ article p {
 
 .proposito {
   grid-area: proposito;
-  padding: 3%;
+
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: bold;
   color: black;
@@ -413,15 +432,15 @@ article p {
 
 @media (min-width: 500px) {
   #gridsArea2 {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 3fr;
     grid-template-areas:
-    "cabeza cabeza cabeza"
-    "sobre sobre sobre"
+    "cabeza cabeza cabeza cabeza"
+    "sobre sobre sobre sobre"
     "video video video"
-    "proposito proposito proposito"
-    "iframe iframe iframe"
-    "info    info info"
-    "footer  footer footer";
+    "proposito proposito proposito proposito"
+    "iframe iframe iframe iframe"
+    "info    info   info info"
+    "footer  footer footer footer";
   }
 }
 
@@ -429,13 +448,13 @@ article p {
   #gridsArea2 {
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: 
-  "cabeza cabeza cabeza"
-  "sobre sobre sobre"
-  "video    video   video"
-  "proposito   proposito   proposito "
-  "iframe    iframe   iframe"
-  "info     info     info"
-  "footer    footer   footer"; 
+  "cabeza cabeza cabeza cabeza"
+  "sobre sobre sobre sobre"
+  "video    video   video "
+  "proposito   proposito   proposito  proposito"
+  "iframe    iframe   iframe iframe"
+  "info     info     info  info"
+  "footer    footer   footer  footer"; 
   }
 }
 
@@ -574,9 +593,7 @@ ul {
 }
 /* LARGE SIZE */
 @media(min-width: 700px) {
-  body {
-      padding: 0 4em;
-  }
+
   .contact-wrapper {
       display: grid;
       grid-template-columns: 2fr 1fr;
@@ -603,3 +620,5 @@ ul {
   height: 100%;
   width: 100%;
 }
+
+/*Productos*/
