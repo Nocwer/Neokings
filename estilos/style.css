@@ -237,6 +237,15 @@ section {
   align-items: flex-end;
 align-content: flex-end;}
 
+.aside img{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+align-content: flex-end;}
+
+
+
+
 
 #productos {
   grid-area: productos; }
@@ -270,21 +279,22 @@ align-content: flex-end;}
   grid-template-columns: 1fr;
   grid-template-rows: auto; }
 
-@media (min-width: 500px) {
+@media screen and(min-width: 500px) {
   #gridsArea {
     grid-template-columns: 1fr 2fr;
     grid-template-areas: 
     "cabeza cabeza"
     "productos productos"
     "seccion seccion"
-  "texto brazo"
+    "brazo brazo"
+  "texto texto"
   "galeria galeria"
   "info    info"
   "footer  footer"; } }
 
 @media screen and (min-width: 700px) {
   #gridsArea {
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 3fr 3fr 1fr;
     grid-template-areas: "cabeza cabeza cabeza"
     "productos productos productos"
     "seccion seccion seccion"
@@ -296,11 +306,12 @@ align-content: flex-end;}
 
 @media screen and (min-width: 920px) {
   #gridsArea {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "cabeza cabeza cabeza"
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+    "cabeza cabeza cabeza"
     "productos productos productos"
     "seccion seccion seccion seccion"
-  "texto brazo brazo"
+  "texto texto brazo brazo"
   "galeria galeria galeria"
   "info    info    info"
   "footer footer footer"; } }
